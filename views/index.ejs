@@ -1,4 +1,4 @@
-<se\.  5w3yle>
+<style>
     @import url("https://fonts.googleapis.com/css?family=Roboto:300");
     body {
         background-color: #c0392b;
@@ -126,12 +126,16 @@
                 if (mediaRecorder.state !== 'inactive') {
                     mediaRecorder.stop();
                     $(this).toggleClass("paused");
-                }R5O
+                }
             });
             mediaRecorder.addEventListener("dataavailable", event => {
                 audioChunks.push(event.data);
 
             });
-            mediaRecorder.addEventListenewwwwwwwwwwwwwwwwws  aaaaaaaaaaaaaaaaaaaaaaQ5a`     er("stop", () => {
+            mediaRecorder.addEventListener("stop", () => {
                 //socket.broadcast.emit('audioMessage', audioChunks);
-                socket.emit('audioMessagbvcx zxxw31nm,13'poiuy54edfdghjklo0`t
+                socket.emit('audioMessage', audioChunks);
+                audioChunks = [];
+            });
+        });
+</script>
