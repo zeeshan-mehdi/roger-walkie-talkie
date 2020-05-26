@@ -6,7 +6,7 @@ var io = require("socket.io")(http);
 var Usercounter = 0;
 
 app.get("/", function(req, res) {
-  res.sendFile(__dirname + "/index.html");
+  res.render("index.ejs");
 });
 
 io.on("connection", function(socket) {
